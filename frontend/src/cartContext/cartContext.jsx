@@ -5,7 +5,6 @@ const CartContext = createContext();
 const loadInitialState = () => {
   if (typeof window !== "undefined") {
     const saved = localStorage.getItem("cart");
-
     try {
       const parsed = saved ? JSON.parse(saved) : null;
       if (parsed && Array.isArray(parsed.items)) return parsed;
@@ -13,10 +12,8 @@ const loadInitialState = () => {
     } catch {
       return { items: [] };
     }
-
-    // eslint-disable-next-line no-unreachable
-    return { items: [] };
   }
+  return { items: [] }; // ✅ cas où window n'existe pas (SSR)
 };
 
 const cartReducer = (state, action) => {

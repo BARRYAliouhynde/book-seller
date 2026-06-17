@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import { navbarStyles } from "../assets/dummystyles";
 import { Link } from "react-router-dom";
@@ -161,7 +162,7 @@ const Navbar = () => {
                   )}
                 </Link>
                 <Link
-                  to="login"
+                  to="/login"
                   className=" p-2 group"
                   onClick={() => setIsOpen(false)}
                 >

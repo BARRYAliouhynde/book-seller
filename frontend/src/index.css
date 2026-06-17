@@ -8,3 +8,12 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+input::-ms-reveal,
+input::-ms-clear {
+  display: none; /* Edge */
+}
+
+input::-webkit-credentials-auto-fill-button,
+input::-webkit-strong-password-auto-fill-button {
+  display: none; /* Chrome/Safari */
+}

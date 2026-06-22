@@ -7,15 +7,7 @@ import CartPage from "./pages/CartPage";
 import ContactPage from "./pages/ContactPage";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-console.log({
-  Home,
-  BookPage,
-  Login,
-  SignUp,
-  AboutPage,
-  CartPage,
-  ContactPage,
-});
+import About from "./components/About";
 
 const App = () => {
   return (
